@@ -1,0 +1,142 @@
+/* Global */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: "Times New Roman", Times, serif; */
+  background: linear-gradient(135deg, #2e2e2e, #3a3a3a);
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+/* Header */
+header h1 {
+  font-size: 2.5rem;
+  margin: 30px 0 20px;
+  color: #ffffff;
+}
+
+/* Intro paragraph */
+main p {
+  font-size: 18px;
+  color: #d1d1d1;
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+/* Main image */
+main img {
+  width: 90%;
+  max-width: 1000px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+main img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+/* ---------- set a single content width for consistent alignment ---------- */
+:root{
+  --content-width: 960px;   /* change this to taste (700–900px are common) */
+  --page-padding: 16px;
+}
+
+/* constrain and center the main content area */
+main {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--page-padding);
+  box-sizing: border-box;
+}
+
+/* hero image fills the content area (no viewport % widths) */
+.hero {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 16px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.35);
+  transition: filter .25s ease;
+}
+
+/* intro paragraph uses same centered container (no extra max-width needed) */
+.intro {
+  margin: 10px 0 32px;
+  color: #d3d3d3;
+  line-height: 1.6;
+}
+
+/* Projects wrapper stays centered, heading centered */
+.projects {
+  margin: 40px auto;
+  text-align: center; /* keeps the section title centered */
+}
+
+/* project cards fill the content width but their internal text is left aligned */
+.project {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;               /* <-- forces titles & descriptions left */
+  background: var(--card, #3c3c3c);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 16px 18px;
+  margin: 12px 0;
+  border-radius: 10px;
+}
+
+/* typography inside cards */
+.project h3 {
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.project p {
+  margin: 0;
+  /* color: #b0b0b0; */
+  color: #e0e0e0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.4s; }
+.delay-2 { animation-delay: 0.7s; }
+.delay-3 { animation-delay: 1.1s; }
+.delay-3 { animation-delay: 1.3s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+a {
+  color: #4dabf7; /* Soft blue */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.project p + p {
+  margin-top: 12px; /* more space between paragraphs */
+}
+
