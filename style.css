@@ -140,3 +140,6 @@ a:hover {
   margin-top: 12px; /* more space between paragraphs */
 }
 
+p.grapes > span {
+  display: none;
+}
